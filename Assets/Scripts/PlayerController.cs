@@ -6,20 +6,28 @@ public class PlayerController : MonoBehaviour
 {
     [Header("PlayerMovement")]
 
-    float horizontalInput;
-
     [SerializeField] float speed = 10;
+
+    float horizontalInput;
+    
 
     [Header("PlayerPosition")]
 
     //Variable that sees the max range the player can go to
     [SerializeField] float xRange = 10;
 
+    [SerializeField] GameObject projectilePrefab;
+
     void Update()
     {
         Movement();
 
         FixPosition();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectilePrefab,transform.position, projectilePrefab.transform.rotation);
+        }
     }
 
     //Code that moves the player
