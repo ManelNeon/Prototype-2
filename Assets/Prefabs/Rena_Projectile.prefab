@@ -692,6 +692,8 @@ GameObject:
   - component: {fileID: 6224494979869079416}
   - component: {fileID: 6783563148558914098}
   - component: {fileID: 6998134301385509722}
+  - component: {fileID: 6360128503873528390}
+  - component: {fileID: 5094710200074319759}
   m_Layer: 0
   m_Name: Rena_Projectile
   m_TagString: Untagged
@@ -757,7 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abbbdd1cd61722f4dae408e56d9848ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 5
 --- !u!114 &6998134301385509722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +770,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0ea7ec5a752e064b88de477c4cfc8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &6360128503873528390
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3951036110200375898}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.17027454, y: 0.4631939, z: 0.42181778}
+  m_Center: {x: -0.0027339025, y: 0.22965735, z: 0.0669383}
+--- !u!114 &5094710200074319759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3951036110200375898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c188d55f5562c6d4aa09943f4aa75efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4344742332113560125

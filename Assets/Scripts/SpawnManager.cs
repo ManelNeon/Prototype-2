@@ -7,26 +7,27 @@ public class SpawnManager : MonoBehaviour
     [Header("Animals")]
     [SerializeField] GameObject[] animalPrefabs;
 
-    [Header("SpawnLocations")]
+    [Header("Spawn Settings")]
     [SerializeField] float spawnRangeX = 20;
 
     [SerializeField] float spawnPosZ = 20;
 
-    void Update()
+    [SerializeField] float startDelay = 2;
+
+    [SerializeField] float spawnInterval = 1.5f;
+
+    void Start()
     {
-        AnimalSpawn();
+        InvokeRepeating("AnimalSpawn", startDelay, spawnInterval);
     }
 
     //Spawn Animals
     void AnimalSpawn()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            int animalIndex = Random.Range(0, animalPrefabs.Length);
+        int animalIndex = Random.Range(0, animalPrefabs.Length);
 
-            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
 
-            Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
-        }
+        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
     }
 }

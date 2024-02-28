@@ -785,6 +785,8 @@ GameObject:
   - component: {fileID: 4568953014360228702}
   - component: {fileID: 6216578266626052237}
   - component: {fileID: 2687706657186666174}
+  - component: {fileID: 1259516727956632000}
+  - component: {fileID: 1944172432217806571}
   m_Layer: 0
   m_Name: Dog_Projectile
   m_TagString: Untagged
@@ -877,7 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abbbdd1cd61722f4dae408e56d9848ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 5
 --- !u!114 &2687706657186666174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,6 +890,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0ea7ec5a752e064b88de477c4cfc8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1259516727956632000
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571419889184606685}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.069934845, y: 0.21167322, z: 0.26650095}
+  m_Center: {x: -0.0010030568, y: 0.10425434, z: 0.032412317}
+--- !u!114 &1944172432217806571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571419889184606685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c188d55f5562c6d4aa09943f4aa75efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1599895433057463192
