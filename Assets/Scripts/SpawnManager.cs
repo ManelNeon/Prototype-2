@@ -26,8 +26,26 @@ public class SpawnManager : MonoBehaviour
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);
 
-        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        //random number para decidir se vai nascer em cima, ou dos lados
+        int random = Random.Range(0, 3);
 
-        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+        if (random == 0)
+        {
+            Vector3 spawnPos = new Vector3(-24, 0, Random.Range(0, 15));
+
+            Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation * Quaternion.Euler(0, -90, 0));
+        }
+        else if (random == 1)
+        {
+            Vector3 spawnPos = new Vector3(24, 0, Random.Range(0, 15));
+
+            Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation * Quaternion.Euler(0, 90, 0));
+        }
+        else if (random == 2)
+        {
+            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+
+            Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+        }
     }
 }
